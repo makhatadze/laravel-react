@@ -1,8 +1,17 @@
 <?php
-
+/**
+ *  server/app/Providers/AppServiceProvider.php
+ *
+ * User: 
+ * Date-Time: 14.09.20
+ * Time: 12:11
+ * @author Vito Makhatadze <vitomaxatadze@gmail.com>
+ */
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +32,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
     }
 }

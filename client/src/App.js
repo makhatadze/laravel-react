@@ -9,11 +9,12 @@ import Profile from './modules/User/Profile'
 
 // Redux
 import {Provider} from 'react-redux'
+import store from "./store/store";
 
 class App extends Component {
     render() {
         return (
-            <Provider>
+            <Provider store={store}>
                 <Router>
                     <div className="App">
                         <Navbar/>
